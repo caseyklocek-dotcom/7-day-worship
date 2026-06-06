@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stewarding Your Time for God — 7 Day Worship Ep. 17</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --e-black:  #111009;
+  --e-dark:   #1C1410;
+  --e-mid:    #2A1F16;
+  --e-brown:  #4A3020;
+  --e-muted:  #8A7060;
+  --e-orange: #E8622A;
+  --e-amber:  #C94E1A;
+  --e-gold:   #F5A623;
+  --e-cream:  #F5EEE6;
+  --e-white:  #FFFDF9;
+
+  --f-display: 'Cormorant Garamond', Georgia, serif;
+  --f-serif:   'DM Serif Display', Georgia, serif;
+  --f-body:    'DM Sans', system-ui, sans-serif;
+
+  --page-pad: clamp(24px, 6vw, 80px);
+  --max-w: 760px;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--f-body);
+  background: var(--e-dark);
+  color: var(--e-cream);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+
+/* ── HERO ─────────────────────────────────── */
+.hero {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 var(--page-pad) 72px;
+  position: relative;
+  overflow: hidden;
+  background: var(--e-black);
+}
+.hero-glow {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 100%, rgba(232,98,42,0.18) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 30% at 80% 10%, rgba(245,166,35,0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero-grain {
+  position: absolute; inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 256px;
+  pointer-events: none;
+}
+.hero-inner { max-width: var(--max-w); position: relative; }
+
+.hero-eyebrow {
+  display: flex; align-items: center; gap: 14px; margin-bottom: 36px;
+}
+.ember-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--e-orange); flex-shrink: 0;
+}
+.eyebrow-text {
+  font-size: 0.65rem; font-weight: 600; letter-spacing: 0.35em;
+  text-transform: uppercase; color: var(--e-orange);
+}
+.eyebrow-sep { font-size: 0.65rem; color: rgba(245,238,230,0.2); }
+.eyebrow-ep {
+  font-size: 0.65rem; font-weight: 500; letter-spacing: 0.2em;
+  text-transform: uppercase; color: rgba(245,238,230,0.3);
+}
+.hero-title {
+  font-family: var(--f-display);
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 700; line-height: 1.02;
+  color: var(--e-cream); letter-spacing: -0.01em;
+  margin-bottom: 20px;
+}
+.hero-title em { font-style: italic; color: var(--e-orange); }
+.hero-tagline {
+  font-size: 1rem; line-height: 1.7;
+  color: rgba(245,238,230,0.45);
+  max-width: 520px; margin-bottom: 36px;
+}
+.hero-meta {
+  display: flex; flex-wrap: wrap; gap: 24px; align-items: center;
+}
+.hero-meta-item { display: flex; flex-direction: column; gap: 3px; }
+.meta-label {
+  font-size: 0.6rem; font-weight: 600; letter-spacing: 0.2em;
+  text-transform: uppercase; color: rgba(245,238,230,0.3);
+}
+.meta-value { font-size: 0.875rem; font-weight: 500; color: var(--e-cream); }
+.hero-divider {
+  width: 1px; height: 32px;
+  background: rgba(245,238,230,0.1); align-self: center;
+}
+.scroll-cue {
+  margin-top: 56px; display: flex; align-items: center; gap: 10px;
+}
+.scroll-line { width: 32px; height: 1px; background: var(--e-orange); opacity: 0.5; }
+.scroll-label {
+  font-size: 0.6rem; font-weight: 500; letter-spacing: 0.25em;
+  text-transform: uppercase; color: rgba(245,238,230,0.25);
+}
+
+/* ── MAIN ─────────────────────────────────── */
+.main {
+  max-width: calc(var(--max-w) + var(--page-pad) * 2);
+  margin: 0 auto; padding: 0 var(--page-pad);
+}
+
+/* ── SECTION LABELS ───────────────────────── */
+.section-label {
+  font-size: 0.6rem; font-weight: 700; letter-spacing: 0.35em;
+  text-transform: uppercase; color: var(--e-orange);
+  margin-bottom: 40px;
+  display: flex; align-items: center; gap: 16px;
+}
+.section-label::after {
+  content: ''; flex: 1; height: 1px;
+  background: rgba(232,98,42,0.15); max-width: 60px;
+}
+
+/* ── PERSONAL INTRO ───────────────────────── */
+.personal-intro {
+  padding: 96px 0 72px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.intro-body {
+  font-size: 1.1rem;
+  line-height: 1.85;
+  color: rgba(245,238,230,0.7);
+  max-width: 680px;
+}
+.intro-body p { margin-bottom: 1.4em; }
+.intro-body p:last-child { margin-bottom: 0; }
+.intro-body strong { color: var(--e-cream); font-weight: 500; }
+
+/* ── ANCHOR VERSE ─────────────────────────── */
+.anchor-verse {
+  padding: 72px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.verse-pull {
+  font-family: var(--f-display);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 400; font-style: italic;
+  line-height: 1.45; color: var(--e-cream);
+  max-width: 640px; margin-bottom: 20px;
+}
+.verse-ref {
+  font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--e-orange); opacity: 0.7;
+}
+.verse-note {
+  margin-top: 20px; font-size: 0.9rem;
+  line-height: 1.75; color: rgba(245,238,230,0.5);
+  max-width: 560px;
+}
+
+/* ── STUDY SECTIONS ───────────────────────── */
+.study-section {
+  padding: 80px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.study-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 24px 28px; align-items: start;
+  margin-bottom: 40px;
+}
+.study-num {
+  font-family: var(--f-display);
+  font-size: 4rem; font-weight: 700;
+  line-height: 1; color: rgba(232,98,42,0.18);
+  letter-spacing: -0.04em;
+  grid-row: span 2; padding-top: 4px;
+}
+.study-kicker {
+  font-size: 0.6rem; font-weight: 700;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--e-orange); margin-bottom: 6px;
+}
+.study-title {
+  font-family: var(--f-display);
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 700; line-height: 1.1; color: var(--e-cream);
+}
+.study-lead {
+  font-size: 1rem; line-height: 1.8;
+  color: rgba(245,238,230,0.6);
+  margin-bottom: 36px; max-width: 640px;
+}
+
+/* Teaching points */
+.teaching-points { display: flex; flex-direction: column; gap: 0; margin-bottom: 36px; }
+.point {
+  display: grid; grid-template-columns: 20px 1fr;
+  gap: 16px; padding: 20px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.point:last-child { border-bottom: none; }
+.point-dot {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--e-orange); margin-top: 9px;
+  opacity: 0.7; flex-shrink: 0;
+}
+.point-text {
+  font-size: 0.95rem; line-height: 1.75;
+  color: rgba(245,238,230,0.75);
+}
+.point-text strong { color: var(--e-cream); font-weight: 500; }
+
+/* Scripture chips */
+.scripture-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.scripture-chip {
+  font-size: 0.7rem; font-weight: 500; letter-spacing: 0.08em;
+  color: rgba(245,238,230,0.5);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 100px; padding: 4px 12px;
+}
+
+/* Quote callout */
+.quote-callout {
+  background: rgba(232,98,42,0.06);
+  border-left: 2px solid var(--e-orange);
+  border-radius: 0 8px 8px 0;
+  padding: 24px 28px; margin: 40px 0;
+}
+.quote-callout p {
+  font-family: var(--f-display);
+  font-size: 1.15rem; font-style: italic;
+  line-height: 1.65; color: var(--e-cream);
+}
+.quote-callout cite {
+  display: block; margin-top: 10px;
+  font-size: 0.7rem; font-style: normal;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--e-orange); opacity: 0.65;
+}
+
+/* ── REFLECTION ───────────────────────────── */
+.reflection-intro {
+  font-size: 0.95rem; line-height: 1.8;
+  color: rgba(245,238,230,0.55);
+  margin-bottom: 32px; max-width: 580px;
+}
+.reflection-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+}
+@media (max-width: 600px) { .reflection-grid { grid-template-columns: 1fr; } }
+.reflection-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px; padding: 24px 24px 28px;
+}
+.reflection-num {
+  font-size: 0.6rem; font-weight: 700;
+  letter-spacing: 0.25em; color: var(--e-orange);
+  opacity: 0.6; margin-bottom: 10px; display: block;
+}
+.reflection-q {
+  font-size: 0.925rem; line-height: 1.65;
+  color: rgba(245,238,230,0.75);
+}
+
+/* ── NEXT STEP ────────────────────────────── */
+.next-step-section {
+  padding: 80px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.next-step-card {
+  background: rgba(232,98,42,0.07);
+  border: 1px solid rgba(232,98,42,0.18);
+  border-radius: 16px; padding: 40px;
+}
+.next-step-title {
+  font-family: var(--f-display);
+  font-size: 1.6rem; font-weight: 700;
+  color: var(--e-cream); margin-bottom: 16px;
+}
+.next-step-body {
+  font-size: 0.975rem; line-height: 1.8;
+  color: rgba(245,238,230,0.65);
+  max-width: 580px; margin-bottom: 28px;
+}
+.next-step-body p { margin-bottom: 1em; }
+.next-step-body p:last-child { margin-bottom: 0; }
+.habit-list { display: flex; flex-direction: column; gap: 10px; }
+.habit-item {
+  display: flex; align-items: flex-start; gap: 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 10px; padding: 16px 18px;
+}
+.habit-icon {
+  font-size: 1rem; flex-shrink: 0; margin-top: 1px;
+}
+.habit-text {
+  font-size: 0.9rem; line-height: 1.65;
+  color: rgba(245,238,230,0.7);
+}
+.habit-text strong { color: var(--e-cream); font-weight: 500; }
+
+/* ── GUEST ────────────────────────────────── */
+.guest-section {
+  padding: 80px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.guest-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 40px; align-items: start;
+}
+@media (max-width: 640px) { .guest-layout { grid-template-columns: 1fr; } }
+
+.guest-photo-wrap { display: flex; flex-direction: column; gap: 20px; }
+.guest-photo {
+  width: 200px; height: 240px;
+  object-fit: cover; object-position: top center;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  display: block;
+}
+.book-link { display: block; text-decoration: none; }
+.book-cover-img {
+  width: 200px;
+  border-radius: 6px;
+  display: block;
+  box-shadow: -4px 2px 16px rgba(0,0,0,0.5), 4px 4px 20px rgba(0,0,0,0.35);
+  transition: transform 200ms, box-shadow 200ms;
+}
+.book-link:hover .book-cover-img {
+  transform: translateY(-3px) rotate(1deg);
+  box-shadow: -5px 4px 24px rgba(0,0,0,0.6), 6px 8px 28px rgba(0,0,0,0.45);
+}
+
+.guest-content { padding-top: 4px; }
+.guest-name {
+  font-family: var(--f-display);
+  font-size: 2rem; font-weight: 700;
+  color: var(--e-cream); margin-bottom: 4px;
+}
+.guest-role {
+  font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--e-orange);
+  opacity: 0.8; margin-bottom: 24px;
+}
+.guest-bio {
+  font-size: 0.95rem; line-height: 1.8;
+  color: rgba(245,238,230,0.6);
+  margin-bottom: 28px;
+}
+.guest-bio p { margin-bottom: 1em; }
+.guest-bio p:last-child { margin-bottom: 0; }
+.amazon-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--e-orange); color: #fff;
+  text-decoration: none; border-radius: 8px;
+  padding: 12px 22px;
+  font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em;
+  transition: background 160ms, transform 160ms;
+}
+.amazon-btn:hover { background: var(--e-amber); transform: translateY(-1px); }
+.amazon-btn svg { flex-shrink: 0; }
+
+/* ── SCRIPTURE REFERENCES ─────────────────── */
+.scripture-section { padding: 80px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.scripture-list { display: flex; flex-direction: column; gap: 0; }
+.scripture-item {
+  display: grid; grid-template-columns: 160px 1fr;
+  gap: 24px; padding: 24px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  align-items: start;
+}
+.scripture-item:last-child { border-bottom: none; }
+.scripture-ref {
+  font-family: var(--f-display); font-size: 1rem;
+  font-weight: 600; color: var(--e-orange); padding-top: 2px;
+}
+.scripture-note {
+  font-size: 0.875rem; line-height: 1.65;
+  color: rgba(245,238,230,0.55);
+}
+
+/* ── FOOTER ───────────────────────────────── */
+.footer {
+  padding: 48px var(--page-pad);
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 16px;
+}
+.footer-brand { display: flex; align-items: center; gap: 10px; }
+.footer-wordmark {
+  font-family: var(--f-display); font-size: 0.875rem;
+  font-weight: 700; color: rgba(245,238,230,0.4); letter-spacing: 0.06em;
+}
+.footer-wordmark em { color: var(--e-orange); font-style: normal; }
+.footer-ep { font-size: 0.7rem; color: rgba(245,238,230,0.2); letter-spacing: 0.12em; }
+
+/* ── UTIL ─────────────────────────────────── */
+@media (max-width: 520px) {
+  .study-header { grid-template-columns: 1fr; }
+  .study-num { font-size: 2.5rem; grid-row: 1; }
+  .hero-divider { display: none; }
+  .scripture-item { grid-template-columns: 1fr; gap: 8px; }
+}
+a { color: inherit; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <div class="ember-dot"></div>
+      <span class="eyebrow-text">7 Day Worship</span>
+      <span class="eyebrow-sep">·</span>
+      <span class="eyebrow-ep">Episode 17 Study Guide</span>
+    </div>
+    <h1 class="hero-title">Stewarding Your<br>Time <em>for God</em></h1>
+    <p class="hero-tagline">An invitation to build your days with purpose — grounded in Scripture, shaped by intention, and offered back to God as an act of worship.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="meta-label">Guest</span>
+        <span class="meta-value">Jason Van Dyke</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-meta-item">
+        <span class="meta-label">Anchor Text</span>
+        <span class="meta-value">Ephesians 5:15–16</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-meta-item">
+        <span class="meta-label">Episode</span>
+        <span class="meta-value">Monday, May 11, 2026</span>
+      </div>
+    </div>
+    <div class="scroll-cue">
+      <div class="scroll-line"></div>
+      <span class="scroll-label">Begin Study</span>
+    </div>
+  </div>
+</section>
+
+<div class="main">
+
+  <!-- PERSONAL INTRO -->
+  <section class="personal-intro">
+    <div class="section-label">A word before we start</div>
+    <div class="intro-body">
+      <p>I want to be honest with you about something. There are seasons where I look up and realize I have no idea where my week went. The calendar was full. I was busy. But if someone asked me what I was building toward, I'd have to pause longer than I'd like.</p>
+      <p>I think a lot of us are living in that gap. Full days, but scattered ones. And the thing is, <strong>busyness and faithfulness are two different things.</strong> Scripture actually has a lot to say about the difference.</p>
+      <p>This episode is an invitation to close that gap. To take a real look at how you're spending your time and ask whether those choices are ones you're making on purpose, with God in mind. Jason Van Dyke joins us to bring a framework that has helped him do exactly that. His book, <em>Rules for (My) Life</em>, came out of decades of journaling and a simple conviction: <strong>a good life doesn't just happen to you. You build it.</strong></p>
+      <p>Grab a journal. Work through this slowly. And let's figure out together what it looks like to steward your time as an act of worship.</p>
+    </div>
+  </section>
+
+  <!-- ANCHOR VERSE -->
+  <section class="anchor-verse">
+    <div class="section-label">Anchor Verse</div>
+    <p class="verse-pull">"Look carefully then how you walk, not as unwise but as wise, making the best use of the time, because the days are evil."</p>
+    <span class="verse-ref">Ephesians 5:15–16 ESV</span>
+    <p class="verse-note">That phrase "making the best use of the time" is a marketplace word in Greek. It means to buy something back. To redeem it from being spent on lesser things. Paul is saying: your time will go somewhere. The work is deciding where, and doing it on purpose.</p>
+  </section>
+
+  <!-- SECTION 1 -->
+  <section class="study-section">
+    <div class="study-header">
+      <span class="study-num">01</span>
+      <div class="study-kicker">The Foundation</div>
+      <h2 class="study-title">Your Days Were<br>Given to You</h2>
+    </div>
+    <p class="study-lead">Before we talk habits or frameworks, we need to get the foundation right. Because how you see time will shape everything else. And Scripture gives us a starting point that changes the whole conversation.</p>
+    <div class="teaching-points">
+      <div class="point">
+        <div class="point-dot"></div>
+        <p class="point-text"><strong>Psalm 139:16 says God ordained every one of your days before you lived a single one.</strong> That means your time was given to you. You didn't create it. You received it. That one shift, from owner to steward, opens up a completely different way of living.</p>
+      </div>
+      <div class="point">
+        <div class="point-dot"></div>
+        <p class="point-text"><strong>Stewardship is freeing, not just demanding.</strong> When your time belongs to God, you get to ask Him how to use it. You carry the responsibility of a steward, but you also carry the peace of someone who knows they are managing something that was already paid for.</p>
+      </div>
+      <div class="point">
+        <div class="point-dot"></div>
+        <p class="point-text"><strong>There are two ways people lose their time.</strong> Overwork says your output is your worth, so you grind until something breaks. Overplay says your pleasure is your purpose, so you escape until the days are gone. Both start from the same place: forgetting that the time belongs to Someone else.</p>
+      </div>
+      <div class="point">
+        <div class="point-dot"></div>
+        <p class="point-text"><strong>The world measures time by productivity.</strong> Scripture measures it by faithfulness. Paul does not say "make the most of your time" in the hustle sense. He says make the best use of it, which requires knowing what "best" actually means, and letting God define it.</p>
+      </div>
+    </div>
+    <div class="scripture-row">
+      <span class="scripture-chip">Psalm 139:16</span>
+      <span class="scripture-chip">Ephesians 5:15–16</span>
+      <span class="scripture-chip">Psalm 90:12</span>
+    </div>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section class="study-section">
+    <div class="study-header">
+      <span class="study-num">02</span>
+      <div class="study-kicker">The Practice</div>
+      <h2 class="study-title">What Prayer Does<br>to Your Day</h2>
+    </div>
+    <p class="study-lead">1 Timothy 2 is one of those passages that sounds gentle until you actually read it closely. Paul is giving us a practical framework for how a faithful day is built, and it starts somewhere most of us don't expect.</p>
+    <div class="teaching-points">
+      <div class="point">
+        <div class="point-dot"></div>
+        <p class="point-text"><strong>Paul starts with intercession.</strong> Pray for everyone, he says. For kings and all who are in authority. Why? So that we may live quiet and peaceable lives in godliness. Prayer is the architecture of the day, laid before anything else gets placed on it.</p>
+      </div>
+      <div class="point">
+        <div class="point-dot"></div>
+        <p class="point-text"><strong>Quiet and peaceable is not passive.</strong> In the Greek, these words describe a life that is arranged well. A life with room to move. Prayer is how you create that margin. It reorients what matters before the demands of the day have a chance to tell you what matters instead.</p>
+      </div>
+      <div class="point">
+        <div class="point-dot"></div>
+        <p class="point-text"><strong>Colossians 4:5 ties wisdom directly to how you use time.</strong> Walk in wisdom toward outsiders, making the best use of the time. The people around you are watching how you live. A life with intention and peace is a witness. A life that is constantly frantic and overextended tells a story too.</p>
+      </div>
+    </div>
+    <div class="quote-callout">
+      <p>"Teach us to number our days that we may get a heart of wisdom."</p>
+      <cite>Psalm 90:12</cite>
+    </div>
+    <p class="study-lead" style="margin-top: 0; margin-bottom: 0;">Numbering your days is an act of attention. It's the practice of taking your life seriously enough to ask how you're actually spending it, and humble enough to let God answer.</p>
+    <div class="scripture-row" style="margin-top: 28px;">
+      <span class="scripture-chip">1 Timothy 2:1–2</span>
+      <span class="scripture-chip">Colossians 4:5</span>
+      <span class="scripture-chip">Psalm 90:12</span>
+    </div>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section class="study-section">
+    <div class="study-header">
+      <span class="study-num">03</span>
+      <div class="study-kicker">The Framework</div>
+      <h2 class="study-title">Deciding How<br>You Want to Live</h2>
+    </div>
+    <p class="study-lead">This is where Jason Van Dyke's work gets really practical. He spent years as a software developer before becoming a counselor, and somewhere in that journey, he started asking a question that changed everything for him: what would it look like to actually decide how I live, rather than just react to whatever comes next?</p>
+    <div class="teaching-points">
+      <div class="point">
+        <div class="point-dot"></div>
+        <p class="point-text"><strong>A rule for your life is a chosen principle, not a rigid law.</strong> Think of it less like a regulation and more like a commitment you made to yourself about the kind of person you want to be. Jason has spent years refining his, and <a href="https://www.amazon.com/Rules-My-Life-Beginners-Living/dp/B0FGDMS968/" target="_blank" rel="noopener" style="color:var(--e-orange);text-decoration:none;border-bottom:1px solid rgba(232,98,42,0.3)"><em>Rules for (My) Life</em></a> is the guide that came out of that process.</p>
+      </div>
+      <div class="point">
+        <div class="point-dot"></div>
+        <p class="point-text"><strong>Deciding how to live is a deeply biblical act.</strong> Proverbs is full of this. Choose wisdom. Choose the path of the righteous. Walk with the wise. Scripture assumes that people of faith will bring intentionality to how they spend their days, and the people who do that well rarely stumble into it. They chose it.</p>
+      </div>
+      <div class="point">
+        <div class="point-dot"></div>
+        <p class="point-text"><strong>Rest and saying no are the hardest disciplines for most people.</strong> Sabbath was commanded, which tells us something important: humans default toward endless motion. Learning to stop is a theological act. Every no you say to something lesser creates space for a yes that actually matters.</p>
+      </div>
+      <div class="point">
+        <div class="point-dot"></div>
+        <p class="point-text"><strong>Faith belongs at the center of any framework you build.</strong> Personal rules without God become self-optimization, and that road has a ceiling. With God at the center, your framework becomes something closer to a daily liturgy, a structure that keeps returning you to what's real and what's eternal.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFLECTION -->
+  <section class="study-section">
+    <div class="section-label">Journal prompts</div>
+    <p class="reflection-intro">Take these slowly. These are worth sitting with, maybe over a few days rather than all at once. Grab a journal and write out your honest answers. The goal here is clarity, and clarity takes a little space.</p>
+    <div class="reflection-grid">
+      <div class="reflection-card">
+        <span class="reflection-num">01</span>
+        <p class="reflection-q">When you look at the last two weeks, where did your time actually go? Is that where you would have chosen to send it?</p>
+      </div>
+      <div class="reflection-card">
+        <span class="reflection-num">02</span>
+        <p class="reflection-q">What does a "quiet and peaceable" life look like for you personally? What would need to shift in your week to get there?</p>
+      </div>
+      <div class="reflection-card">
+        <span class="reflection-num">03</span>
+        <p class="reflection-q">Where are you most likely to let life happen to you rather than choosing it? What is one area where you want to be more intentional?</p>
+      </div>
+      <div class="reflection-card">
+        <span class="reflection-num">04</span>
+        <p class="reflection-q">What is one rule you could write for your own life today? Something specific, something you actually want to live by. Write it down.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT STEP -->
+  <section class="next-step-section">
+    <div class="section-label">Your next step</div>
+    <div class="next-step-card">
+      <h2 class="next-step-title">Start with one rule.</h2>
+      <div class="next-step-body">
+        <p>You don't need a full life system by tomorrow. You need one thing. One commitment you make about how you're going to use your time, specific enough that you'll know whether you kept it or not.</p>
+        <p>Here are a few examples to spark something for you. Take one, adjust it to fit your actual life, and write it down somewhere you'll see it.</p>
+      </div>
+      <div class="habit-list">
+        <div class="habit-item">
+          <span class="habit-icon">☀️</span>
+          <p class="habit-text"><strong>Protect your first hour.</strong> Before the phone, before email, before the day gets loud — spend the first part of your morning with God. Prayer, Scripture, quiet. Build the day on that foundation.</p>
+        </div>
+        <div class="habit-item">
+          <span class="habit-icon">📖</span>
+          <p class="habit-text"><strong>Number one day each week.</strong> Take 10 minutes on Sunday to look at the week ahead. Ask God: where do I want to be intentional? What matters most? Let that answer shape how you plan, not the other way around.</p>
+        </div>
+        <div class="habit-item">
+          <span class="habit-icon">🛑</span>
+          <p class="habit-text"><strong>Name one thing you're going to stop.</strong> Every good yes requires a no somewhere. Pick one way your time is going to something lesser and decide, specifically, to stop doing it. That space is where something better can grow.</p>
+        </div>
+        <div class="habit-item">
+          <span class="habit-icon">✍️</span>
+          <p class="habit-text"><strong>Write your rule.</strong> Grab a journal and write one sentence: "I will ___." Make it specific. Make it yours. Then share it with someone who will ask you how it's going.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUEST -->
+  <section class="guest-section">
+    <div class="section-label">This episode's guest</div>
+    <div class="guest-layout">
+      <div class="guest-photo-wrap">
+        <img
+          src="images/Jason_headshot_3.jpg"
+          alt="Jason Van Dyke"
+          class="guest-photo"
+        >
+        <a class="book-link" href="https://www.amazon.com/Rules-My-Life-Beginners-Living/dp/B0FGDMS968/" target="_blank" rel="noopener" aria-label="Get Rules for My Life on Amazon">
+          <img
+            src="images/jason_book_cover.jpg"
+            alt="Rules for (My) Life by Jason Van Dyke"
+            class="book-cover-img"
+          >
+        </a>
+      </div>
+      <div class="guest-content">
+        <p class="guest-name">Jason Van Dyke</p>
+        <p class="guest-role">Counselor · Author · Speaker</p>
+        <div class="guest-bio">
+          <p>Jason made a pivot that most people don't have the courage to make. He walked away from a career in software development to become a licensed counselor, driven by a conviction that people deserve to actually love the lives they're living.</p>
+          <p>He's spent years sitting with people in the hard places, helping them find clarity about who they are and how they want to live. His book, <a href="https://www.amazon.com/Rules-My-Life-Beginners-Living/dp/B0FGDMS968/" target="_blank" rel="noopener" style="color:var(--e-orange);text-decoration:none;border-bottom:1px solid rgba(232,98,42,0.3)"><em>Rules for (My) Life</em></a>, is the practical guide that came out of more than a decade of personal journaling and counseling others through the same questions.</p>
+          <p>He joins 7 Day Worship to apply his framework to the one resource none of us can make more of — and to help you figure out what it looks like to steward it on purpose.</p>
+        </div>
+        <a class="amazon-btn" href="https://www.amazon.com/Rules-My-Life-Beginners-Living/dp/B0FGDMS968/" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Get the Book on Amazon
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCRIPTURE REFS -->
+  <section class="scripture-section">
+    <div class="section-label">Key passages</div>
+    <div class="scripture-list">
+      <div class="scripture-item">
+        <span class="scripture-ref">Ephesians 5:15–16</span>
+        <p class="scripture-note">The anchor for the episode. "Making the best use of the time" is a call to buy back what gets stolen by lesser things, and return it to its rightful purpose.</p>
+      </div>
+      <div class="scripture-item">
+        <span class="scripture-ref">Psalm 90:12</span>
+        <p class="scripture-note">"Teach us to number our days." This is a prayer for attention and humility — the beginning of wisdom about time is taking it seriously enough to count it.</p>
+      </div>
+      <div class="scripture-item">
+        <span class="scripture-ref">Psalm 139:16</span>
+        <p class="scripture-note">"All the days ordained for me were written in your book before one of them came to be." Your time was given, not earned. That truth is the foundation of everything that follows.</p>
+      </div>
+      <div class="scripture-item">
+        <span class="scripture-ref">1 Timothy 2:1–2</span>
+        <p class="scripture-note">Pray for everyone, so you may live quiet and peaceable lives. Prayer is the architecture of the day. It shapes the space before the demands of life get to fill it.</p>
+      </div>
+      <div class="scripture-item">
+        <span class="scripture-ref">Colossians 4:5</span>
+        <p class="scripture-note">"Walk in wisdom toward outsiders, making the best use of the time." How you steward your days is a witness. A life with intention and peace tells the people around you something real about what you believe.</p>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /.main -->
+
+<footer class="footer">
+  <div class="footer-brand">
+    <div class="ember-dot"></div>
+    <span class="footer-wordmark">7 <em>Day</em> Worship</span>
+  </div>
+  <span class="footer-ep">Episode 17 · Study Guide · May 11, 2026</span>
+</footer>
+
+</body>
+</html>
